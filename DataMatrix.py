@@ -32,7 +32,3 @@ report_text = 'Количество обработанных строк: {0}\nК
 with open('report.txt', 'w') as report:
     report.write(report_text.format(len(lines), sum([len(line) - len(new_line) for line, new_line in zip(lines, new_lines)])))
 
-# Сохраняем отчет в папке "outPath"
-file_name = 'report.txt'
-with open(os.path.join(out_path, file_name), 'w'):
-    pass
